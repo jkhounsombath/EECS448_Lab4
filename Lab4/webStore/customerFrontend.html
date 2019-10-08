@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="style.css"
+      rel="stylesheet"
+      type="text/css"/>
+  </head>
+  <body>
+    <h1> WELCOME TO JUSTIN'S STORE </h1>
+    <form action= "customerBackend.php" method="post" onsubmit="return validate();">
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+        <tr>
+          <td>Duck sauce</td>
+          <td>$30</td>
+          <td><input type="number" id= "duckquan" name="duckQuan" value="0" min="0"></input></td>
+        </tr>
+        <tr>
+          <td>Fried Rice</td>
+          <td>$20</td>
+          <td><input type="number" id= "friedricequan" name="friedRiceQuan" value="0" min="0"></input></td>
+        </tr>
+        <tr>
+          <td>Egg Rolls</td>
+          <td>$10</td>
+          <td><input type="number" id= "eggrollquan" name="eggRollQuan" value="0" min="0"></input></td>
+        </tr>
+      </table>
+      <br>
+      <table>
+        <tr>
+          <th>Shipping Method</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>7-Day</td>
+          <td>Free!</td>
+          <td><input type="radio" name="shippingMethod" Checked= "true" value= "sevenDay"></input></td>
+        </tr>
+        <tr>
+          <td>3-Day</td>
+          <td>$5</td>
+          <td><input type="radio" name="shippingMethod" value= "threeDay"></input></td>
+        </tr>
+        <tr>
+          <td>Overnight</td>
+          <td>$50</td>
+          <td><input type="radio" name="shippingMethod" value= "overnight"></input></td>
+        </tr>
+      </table>
+      <br>
+      <input type= "button" id="reset" value="reset order" onclick="resetOrder()"></input>
+      <br>
+      <p>Log in to submit your order</p>
+      Username: <input type= "text" name= "username" id="userName" ></input><br>
+      Password: <input type= "password" name="password" id="passWord"></input><br>
+      <p id="output"></p>
+      <input type= "submit" value="Submit order">
+      <script type= "text/javascript" src= "formChecker.js"></script>
+    </form>
+  </body>
+</html>
